@@ -4,5 +4,10 @@
   "description": "A starter template for building VS Code extensions efficiently.",
   "license": "MIT",
   "author": "koyasaeki@gmail.com",
-  "main": "./out/extension.js"
+  "main": "./out/extension.js",
+  "devDependencies": {
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "husky": "8.0.3"
+  }
 }
