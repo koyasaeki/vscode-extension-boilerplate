@@ -1,0 +1,8 @@
+{
+  "name": "vscode-extension-boilerplate",
+  "version": "0.0.1",
+  "description": "A starter template for building VS Code extensions efficiently.",
+  "license": "MIT",
+  "author": "koyasaeki@gmail.com",
+  "main": "./out/extension.js"
+}
