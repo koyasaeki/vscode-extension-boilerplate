@@ -5,7 +5,13 @@
   "license": "MIT",
   "author": "koyasaeki@gmail.com",
   "main": "./out/extension.js",
+  "scripts": {
+    "dev": "bun src/extension.ts",
+    "format": "biome format --write ./src/**",
+    "lint": "biome check --apply ./src/**"
+  },
   "devDependencies": {
+    "@biomejs/biome": "1.1.2",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
     "husky": "8.0.3"
