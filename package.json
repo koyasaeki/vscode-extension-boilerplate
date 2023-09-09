@@ -8,12 +8,15 @@
   "scripts": {
     "dev": "bun src/extension.ts",
     "format": "biome format --write ./src/**",
-    "lint": "biome check --apply ./src/**"
+    "lint": "biome check --apply ./src/**",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
   },
   "devDependencies": {
     "@biomejs/biome": "1.1.2",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
+    "bun-types": "1.0.1",
     "husky": "8.0.3"
   }
 }
