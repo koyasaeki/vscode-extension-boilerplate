@@ -1,22 +1,19 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "lib": [
-      "esnext"
+      "ESNext"
     ],
-    "module": "esnext",
-    "moduleDetection": "force",
-    "moduleResolution": "bundler",
-    "noEmit": true,
-    "skipLibCheck": true,
+    "module": "commonjs",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
     "strict": true,
-    "target": "esnext",
-    "types": [
-      "bun-types"
-    ]
-  }
+    "target": "ESNext"
+  },
+  "exclude": [
+    "commitlint.config.ts"
+  ]
 }

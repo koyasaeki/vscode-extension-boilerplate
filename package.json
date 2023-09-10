@@ -1,22 +1,41 @@
 {
   "name": "vscode-extension-boilerplate",
+  "displayName": "HelloWorld",
   "version": "0.0.1",
   "description": "A starter template for building VS Code extensions efficiently.",
   "license": "MIT",
   "author": "koyasaeki@gmail.com",
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
   "scripts": {
-    "dev": "bun src/extension.ts",
+    "build": "tsc",
+    "dev": "tsc -watch",
     "format": "biome format --write ./src/**",
     "lint": "biome check --apply ./src/**",
     "test": "bun test",
     "test:watch": "bun test --watch"
   },
+  "contributes": {
+    "commands": [
+      {
+        "command": "helloworld.helloworld",
+        "title": "Hello World"
+      }
+    ]
+  },
   "devDependencies": {
     "@biomejs/biome": "1.1.2",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
-    "bun-types": "1.0.1",
-    "husky": "8.0.3"
+    "@types/node": "20.6.0",
+    "@types/vscode": "1.82.0",
+    "husky": "8.0.3",
+    "typescript": "5.2.2"
   }
 }
