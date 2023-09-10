@@ -18,8 +18,8 @@
     "dev": "tsc -watch",
     "format": "biome format --write ./src/**",
     "lint": "biome check --apply ./src/**",
-    "test": "bun test",
-    "test:watch": "bun test --watch"
+    "pretest": "npm run build && npm run format && npm run lint",
+    "test": "node ./dist/tests/run.js"
   },
   "contributes": {
     "commands": [
@@ -33,9 +33,13 @@
     "@biomejs/biome": "1.1.2",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
+    "@types/mocha": "10.0.1",
     "@types/node": "20.6.0",
     "@types/vscode": "1.82.0",
+    "@vscode/test-electron": "2.3.4",
+    "glob": "10.3.4",
     "husky": "8.0.3",
+    "mocha": "10.2.0",
     "typescript": "5.2.2"
   }
 }
